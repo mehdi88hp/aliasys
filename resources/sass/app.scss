@@ -1,0 +1,83 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+// Variables
+@import 'variables';
+
+* {
+    font-family: iranyekan;
+}
+
+h1, h2, h3, h4, h5, h6, a, div, span, button {
+    font-family: iranyekan !important;
+}
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+$spaceamounts: (5, 10, 15, 20, 25, 30, 40, 50); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+    @each $side in $sides {
+        .m-#{str-slice($side, 0, 1)}-#{$space} {
+            margin-#{$side}: #{$space}px !important;
+        }
+
+        .p-#{str-slice($side, 0, 1)}-#{$space} {
+            padding-#{$side}: #{$space}px !important;
+        }
+    }
+}
+
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.d-flex {
+    display: flex !important;
+}
+
+.d-block {
+    display: block !important;
+}
+
+.d-inline {
+    display: inline !important;
+}
+
+.d-inline-block {
+    display: inline-block !important;
+}
+
+span.invalid-feedback {
+    color: red;
+}
+
+.user-score-tag {
+    position: relative !important;
+    top: 15px;
+    color: white;
+}
+
+.hollow-border {
+    border: 1px solid rgba(229, 229, 229, 0.08);
+}
+
+#header_main {
+    background: #9e005d !important;
+}
+
+.md-btn-success, .md-btn-primary {
+    background-color: #00b6bd !important;
+}
+
+.prize-explanation-parent img {
+    margin: 10px;
+}
+
+
+#profile-pic-preview + span ,.prize-pic-preview-div span {
+    display: none;
+    cursor: pointer;
+    color: black;
+}
